@@ -1,6 +1,6 @@
 /* global document, Excel, Office, fetch, console */
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://sheetpilot-ai-excel-1.onrender.com";
 
 Office.onReady((info) => {
     if (info.host !== Office.HostType.Excel) return;
