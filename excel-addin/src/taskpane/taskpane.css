@@ -1,0 +1,277 @@
+/*
+ * SheetPilot AI - Professional Task Pane UI
+ */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f7f9fc;
+    color: #1f2937;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   MAIN APP
+   ========================================= */
+
+.ms-welcome__main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 16px 24px;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.ms-welcome__header {
+    margin: 0 -16px 20px;
+    padding: 22px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #0078d4, #106ebe);
+    color: white;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.ms-welcome__header img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    background: white;
+    padding: 5px;
+}
+
+.ms-welcome__header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+.ms-welcome__main > section {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.ms-welcome__main > section:first-of-type {
+    text-align: center;
+}
+
+.ms-welcome__main h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ms-welcome__main h3 {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #323130;
+}
+
+.ms-welcome__main p {
+    margin: 4px 0;
+    color: #605e5c;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.ms-Button {
+    width: 100%;
+    min-height: 40px;
+    border-radius: 8px !important;
+    border: none !important;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ms-Button--primary {
+    background: #0078d4 !important;
+    color: white !important;
+    box-shadow: 0 2px 5px rgba(0, 120, 212, 0.2);
+}
+
+.ms-Button--primary:hover {
+    background: #106ebe !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 120, 212, 0.25);
+}
+
+.ms-Button--primary:active {
+    transform: translateY(0);
+}
+
+.ms-Button--primary:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* Ask AI button */
+
+.ms-Button.ms-Button--hero {
+    width: 100%;
+    margin-top: 4px;
+    background: #107c10 !important;
+    color: white !important;
+    border-radius: 8px !important;
+}
+
+.ms-Button.ms-Button--hero .ms-Button-label {
+    color: white !important;
+}
+
+.ms-Button.ms-Button--hero:hover {
+    background: #0b6a0b !important;
+}
+
+.ms-Button.ms-Button--hero:hover .ms-Button-label,
+.ms-Button.ms-Button--hero:focus .ms-Button-label {
+    color: white !important;
+}
+
+
+/* =========================================
+   AI INPUT
+   ========================================= */
+
+#ai-input {
+    width: 100% !important;
+    min-height: 100px;
+    padding: 12px !important;
+    margin-top: 4px !important;
+    resize: vertical;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    color: #1f2937;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#ai-input:focus {
+    border-color: #0078d4;
+    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.15);
+}
+
+#ai-input::placeholder {
+    color: #8a8886;
+}
+
+
+/* =========================================
+   AI RESULT
+   ========================================= */
+
+#ai-result {
+    width: 100%;
+    min-height: 70px;
+    margin: 0 !important;
+    padding: 12px !important;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    background: white !important;
+    border: 1px solid #e1e5ea;
+    border-left: 4px solid #0078d4;
+    border-radius: 8px;
+
+    color: #323130;
+    font-family: "Segoe UI", Arial, sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.5;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   STATUS
+   ========================================= */
+
+#status {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 3px 9px;
+    border-radius: 12px;
+    background: #dff6dd;
+    color: #107c10;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ms-welcome__main section:last-child {
+    padding: 10px 12px;
+    background: white;
+    border: 1px solid #e1e5ea;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   SIDeload MESSAGE
+   ========================================= */
+
+#sideload-msg {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+#sideload-msg h2 {
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+button:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #0078d4;
+    outline-offset: 2px;
+}
+
+
+b {
+    font-weight: bold;
+}

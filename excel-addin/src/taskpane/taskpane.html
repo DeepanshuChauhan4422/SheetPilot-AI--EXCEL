@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=Edge"
+    >
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>SheetPilot AI</title>
+
+
+    <!-- Office JavaScript API -->
+
+    <script
+        type="text/javascript"
+        src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js">
+    </script>
+
+
+    <!-- Microsoft Fluent UI -->
+
+    <link
+        rel="stylesheet"
+        href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"
+    >
+
+
+    <!-- Custom CSS -->
+
+    <link
+        href="taskpane.css"
+        rel="stylesheet"
+        type="text/css"
+    >
+
+</head>
+
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+
+
+    <!-- ========================================= -->
+    <!-- SIDELOAD MESSAGE                          -->
+    <!-- ========================================= -->
+
+    <section
+        id="sideload-msg"
+        class="ms-welcome__main"
+    >
+
+        <h2 class="ms-font-xl">
+
+            Please
+            <a
+                target="_blank"
+                href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing"
+            >
+                sideload
+            </a>
+
+            your add-in to see app body.
+
+        </h2>
+
+    </section>
+
+
+
+    <!-- ========================================= -->
+    <!-- MAIN APP                                  -->
+    <!-- ========================================= -->
+
+    <main
+        id="app-body"
+        class="ms-welcome__main"
+        style="display: none;"
+    >
+
+
+        <!-- ===================================== -->
+        <!-- HEADER                                -->
+        <!-- ===================================== -->
+
+        <header class="ms-welcome__header ms-bgColor-neutralLighter">
+
+            <img
+                width="90"
+                height="90"
+                src="../../assets/logo-filled.png"
+                alt="SheetPilot AI"
+                title="SheetPilot AI"
+            >
+
+            <h1 class="ms-font-su">
+                SheetPilot AI
+            </h1>
+
+        </header>
+
+
+
+        <!-- ===================================== -->
+        <!-- AI ASSISTANT                          -->
+        <!-- ===================================== -->
+
+        <section>
+
+            <h2 class="ms-font-xl">
+                🤖 AI Excel Assistant
+            </h2>
+
+            <p class="ms-font-m">
+
+                Control Excel using
+                natural language.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- ===================================== -->
+        <!-- WRITE TEST BUTTON                     -->
+        <!-- ===================================== -->
+
+        <section>
+
+            <button
+                id="write-excel"
+                class="ms-Button ms-Button--primary"
+            >
+
+                <span class="ms-Button-label">
+                    🤖 Write to Excel
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ===================================== -->
+        <!-- READ SELECTED DATA BUTTON             -->
+        <!-- ===================================== -->
+
+        <section>
+
+            <button
+                id="read-data"
+                class="ms-Button ms-Button--primary"
+            >
+
+                <span class="ms-Button-label">
+                    📖 Read Selected Data
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ===================================== -->
+        <!-- AI COMMAND                            -->
+        <!-- ===================================== -->
+
+        <section>
+
+            <h3 class="ms-font-l">
+                Ask SheetPilot AI
+            </h3>
+
+
+            <textarea
+                id="ai-input"
+                rows="5"
+                placeholder="Example: Read A1:C4"
+                style="
+                    width: 100%;
+                    box-sizing: border-box;
+                    resize: vertical;
+                    padding: 10px;
+                    margin-top: 8px;
+                "
+            ></textarea>
+
+
+            <br>
+            <br>
+
+
+            <button
+                id="ask-ai"
+                class="ms-Button ms-Button--hero"
+            >
+
+                <span class="ms-Button-label">
+                    🚀 Ask AI
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ===================================== -->
+        <!-- AI RESULT                             -->
+        <!-- ===================================== -->
+
+        <section>
+
+            <h3 class="ms-font-l">
+                AI Result
+            </h3>
+
+
+            <pre
+                id="ai-result"
+                style="
+                    white-space: pre-wrap;
+                    word-wrap: break-word;
+                    background: #f3f3f3;
+                    padding: 10px;
+                    border-radius: 6px;
+                    min-height: 60px;
+                    font-size: 12px;
+                "
+            >Waiting for your command...</pre>
+
+        </section>
+
+
+
+        <!-- ===================================== -->
+        <!-- STATUS                                -->
+        <!-- ===================================== -->
+
+        <section>
+
+            <p>
+
+                <strong>
+                    Status:
+                </strong>
+
+                <span id="status">
+                    Ready
+                </span>
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
